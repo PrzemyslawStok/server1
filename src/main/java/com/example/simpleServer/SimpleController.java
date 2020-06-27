@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 public class SimpleController {
     List<Integer> array = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+    Integer array1[][]= {{1,2,3,4},{1,2,3,4}};
     @RequestMapping("")
     String getInfo(){
         return "info";
@@ -34,7 +35,7 @@ public class SimpleController {
         return array;
     }
 
-    @RequestMapping("array/{id}")
+    @RequestMapping("array/{i}")
     Integer getArrayElement(@PathVariable("id") int i){
         return array.get(i);
     }
